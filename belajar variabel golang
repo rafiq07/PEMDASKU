@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+func main() {
+
+  /* variabel adalah tempat menampung nilai
+     aturan penulisan nama variabel
+     1. tidak boleh menggunakan keyword punya golang, hrs buat sendiri
+     2. nama variabel tidak boleh diawali dengan angka
+     3. nama variabel bisa
+     cara pendeklarasian variabel dalam golang ada bbrp cara :
+     1. var nama_variabel tipe_data = value . aturan ini disebut manifest typing
+     2. var nama_variabel = value  <-- golang akan mendeteksi tipe data variabel otomatis dri sebuah value . disebut type inference
+     3. nama_variabel := value <-- cara seperti ini singkat, tetapi tidak bisa digunakan di level package/ diluar fungsi
+     4. deklarasi multi variabel
+        ex : var var1, var2, var3 tipe_data
+     
+     fakta unik variabel
+     1. kita bisa sekaligus mendeklarasikan multi variabel dgn banyak tipe data cara sprti ini
+     var(var1, var2, var3 tipe_data)
+     ex : var(a, b ,c string)
+     
+     2. kita bisa menampung variabel yg tidak terpakai dgn menggunakan _ (underscore)
+ 
+  */
+  // CONTOH penerapan variabel
+  var a int = 5
+  var b = 5
+  c := 6
+  
+  
+	name, _ := "john", "wick"
+	fmt.Println(name)
+
+	var nomorpositif uint8 = 89
+	var nomornegatif = -1243423644
+
+	fmt.Printf("bilangan positif : %d\n", nomorpositif) // %d untuk memformat data numerik non-desimal(g koma-komaan)
+	fmt.Printf("bilangan negatif : %d\n", nomornegatif) // jika ingin menggunakan %s/yg lain hrs pke fmt.Printf
+}
